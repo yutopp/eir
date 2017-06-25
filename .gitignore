@@ -1,0 +1,11 @@
+.omakedb
+.omakedb.lock
+
+src/eir
+src/eir.*
+src/*.o
+
+*.omc
+*.cmi
+*.cmx
+*.annot

@@ -1,0 +1,26 @@
+opam-version: "1.2"
+name: "eir"
+version: "0.0.1"
+maintainer: "yutopp <yutopp@gmail.com>"
+author: "yutopp <yutopp@gmail.com>"
+homepage: "https://github.com/yutopp/eir"
+bug-reports: "https://github.com/yutopp/eir/issues"
+license: "Boost License Version 1.0"
+dev-repo: "https://github.com/yutopp/eir.git"
+
+available: [ocaml-version >= "4.04.0"]
+
+build: [
+  [ "omake" "--configure" "PREFIX=%{prefix}%" ]
+  [ "omake" ]
+]
+install: [[ "omake" "install" ]]
+remove: [[ "omake" "uninstall" ]]
+
+depends: [
+  "obeam"
+  "omake"        {build}
+  "ocamlfind"    {build}
+  "ounit"        {build}
+  "bisect_ppx"   {build}
+]
